@@ -1,0 +1,81 @@
+.navBar{
+  background-color: #262a34; 
+  overflow: hidden;
+}
+
+/*Floats each item to the left with padding of 14 & 16 px.
+Removes the underline with text decoration = none.*/
+.navBar a{
+  float: right;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Tahoma;
+}
+/*Background color change during hover state*/
+.navBar a:hover{
+  background-color: white;
+  color: #009cde;
+}
+
+/*Hides the menu Icon which will show when the nav needs to be responsive*/
+.navBar .icon{
+  display: none;
+}
+
+/*Set your custom screen width here replacing 700*/
+@media (max-width: 700px){
+/*Ignores the first link (which is Home) in the div and       applies 'display = none' to everything else.   Basically hiding everything but Home*/
+  .navBar a:not(:first-child){
+    display: none;
+    padding: auto;
+  }
+/*Brings the menu icon into view and floats it to the left*/
+  .navBar a.icon{
+    display: block; float: left;
+  }
+  .navBar .fecha{
+    display: block;
+    float: right;
+    right: 0;
+    top: 0;
+  }
+/*The navBar class will be changed to 'navBar responsive' using JS. This chunk of CSS makes the menu icon stay where it is by making the position absolute within it's parent 'right top corner'. Without this, the icon will get kicked around when the items are collapsed and expanded*/
+  .navBar.responsive {
+    position: relative;
+  }
+  .navBar.responsive a.icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+/*Removes the originally set float and brings them to view*/
+  .navBar.responsive a {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+}
+header .fecha{
+  float: left;
+  text-orientation: right;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 19px 0 0;
+  color: #ffffff;
+  font-size: 30px;
+}
+/*@media screen and (max-width: 575px){
+
+  .navBar{
+    min-height: auto;
+  }
+  .wrapper header .navBar a{
+    display: inline-block;
+    border-bottom: none;
+  }
+  .navBar form button{
+    width: 100%;
+  }
+}*/
