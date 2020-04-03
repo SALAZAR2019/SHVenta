@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Vendedor;
 use DB;
+
 class ApiVendedorController extends Controller
 {
     /**
