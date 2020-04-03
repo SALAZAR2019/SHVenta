@@ -7,6 +7,7 @@ use App\Ventas;
 use App\Producto;
 use App\Detalle_Venta;
 use DB;
+
 class ApiVentaController extends Controller
 {
     /**
